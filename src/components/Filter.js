@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button, Popover, Typography, Slider } from "@mui/material";
 
-
 function Filter() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [age, setAge] = useState(25);
@@ -88,7 +87,7 @@ function Filter() {
       clearInterval(timerInterval);
       clearInterval(repInterval);
     };
-  }, [timerActive, isPaused, exerciseCompleted]);
+  }, [timerActive, isPaused, exerciseCompleted, alertShown, avgReps, avgSets]);
 
   const startTimer = () => {
     setTimerActive(true);
@@ -97,6 +96,7 @@ function Filter() {
     setCurrentReps(0);
     setCurrentSets(0);
     setExerciseCompleted(false);
+    setAlertShown(false);
     setAnchorEl(null);
   };
 

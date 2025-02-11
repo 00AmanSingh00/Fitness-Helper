@@ -4,6 +4,7 @@ import { Typography, Stack, Button } from '@mui/material';
 import BodyPartImage from '../assets/icons/body-part.png';
 import TargetImage from '../assets/icons/target.png';
 import EquipmentImage from '../assets/icons/equipment.png';
+import Filter from './Filter';
 
 const Detail = ({ exerciseDetail }) => {
   const { bodyPart, gifUrl, name, target, equipment } = exerciseDetail;
@@ -46,6 +47,7 @@ const Detail = ({ exerciseDetail }) => {
             </Typography>
           </Stack>
         ))}
+           <Filter/>
       </Stack>
     </Stack>
   );
